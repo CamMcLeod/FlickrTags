@@ -18,7 +18,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
     
-    NSURL *url = [NSURL URLWithString:@"https://api.github.com/users/lighthouse-labs/repos"]; // 1
+    NSURL *url = [NSURL URLWithString:@"https://api.flickr.com/services/rest/?method=flickr.photos.search&format=json&nojsoncallback=1&api_key=1648e27ecf2333ddd82c92f031d7d91e&tags=cat"]; // 1
     NSURLRequest *urlRequest = [[NSURLRequest alloc] initWithURL:url]; // 2
     
     NSURLSessionConfiguration *configuration = [NSURLSessionConfiguration defaultSessionConfiguration]; // 3
@@ -33,7 +33,7 @@
         }
         
         NSError *jsonError = nil;
-        NSArray *repos = [NSJSONSerialization JSONObjectWithData:data options:0 error:&jsonError]; // 2
+        NSDictionary *queryResult = [NSJSONSerialization JSONObjectWithData:data options:0 error:&jsonError]; // 2
         
         if (jsonError) { // 3
             // Handle the error
@@ -42,10 +42,26 @@
         }
         
         // If we reach this point, we have successfully retrieved the JSON from the API
-        for (NSDictionary *repo in repos) { // 4
+        NSDictionary *photos = queryResult[@"photos"];
+        NSArray *photoArray = photos[@"photo"];
+        for (NSDictionary *photo in photoArray) { // 4
+//            server
+//            farm
+//            id
+//            secret
+//            url
+//            title
+            NSString *title =  photo[@"title"];
+            NSLog(@"title: %@", title);
+            NSLog(@"server: %@", photo[@"server"]);
+            NSLog(@"farm: %@", photo[@"farm"]);
+            NSLog(@"id: %@", photo[@"id"]);
+            NSLog(@"secret: %@", photo[@"secret"]);
             
-            NSString *repoName = repo[@"name"];
-            NSLog(@"repo: %@", repoName);
+            
+            
+            
+            
         }
     }];
     
