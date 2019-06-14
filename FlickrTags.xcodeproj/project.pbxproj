@@ -16,6 +16,8 @@
 		6208E62B22B3100B004BB48F /* FlickrTagsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6208E62A22B3100B004BB48F /* FlickrTagsTests.m */; };
 		6208E63622B3100B004BB48F /* FlickrTagsUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6208E63522B3100B004BB48F /* FlickrTagsUITests.m */; };
 		6208E64522B315AB004BB48F /* Photo.m in Sources */ = {isa = PBXBuildFile; fileRef = 6208E64422B315AB004BB48F /* Photo.m */; };
+		6208E64822B3208F004BB48F /* PhotoCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6208E64722B3208F004BB48F /* PhotoCollectionViewCell.m */; };
+		6208E64A22B3271D004BB48F /* raccoon-2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 6208E64922B3271D004BB48F /* raccoon-2.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +56,9 @@
 		6208E63722B3100B004BB48F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6208E64322B315AB004BB48F /* Photo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Photo.h; sourceTree = "<group>"; };
 		6208E64422B315AB004BB48F /* Photo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Photo.m; sourceTree = "<group>"; };
+		6208E64622B3208F004BB48F /* PhotoCollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PhotoCollectionViewCell.h; sourceTree = "<group>"; };
+		6208E64722B3208F004BB48F /* PhotoCollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PhotoCollectionViewCell.m; sourceTree = "<group>"; };
+		6208E64922B3271D004BB48F /* raccoon-2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "raccoon-2.jpg"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +109,7 @@
 		6208E61022B3100A004BB48F /* FlickrTags */ = {
 			isa = PBXGroup;
 			children = (
+				6208E64922B3271D004BB48F /* raccoon-2.jpg */,
 				6208E61122B3100A004BB48F /* AppDelegate.h */,
 				6208E61222B3100A004BB48F /* AppDelegate.m */,
 				6208E61422B3100A004BB48F /* ViewController.h */,
@@ -115,6 +121,8 @@
 				6208E61C22B3100B004BB48F /* LaunchScreen.storyboard */,
 				6208E61F22B3100B004BB48F /* Info.plist */,
 				6208E62022B3100B004BB48F /* main.m */,
+				6208E64622B3208F004BB48F /* PhotoCollectionViewCell.h */,
+				6208E64722B3208F004BB48F /* PhotoCollectionViewCell.m */,
 			);
 			path = FlickrTags;
 			sourceTree = "<group>";
@@ -240,6 +248,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6208E64A22B3271D004BB48F /* raccoon-2.jpg in Resources */,
 				6208E61E22B3100B004BB48F /* LaunchScreen.storyboard in Resources */,
 				6208E61B22B3100B004BB48F /* Assets.xcassets in Resources */,
 				6208E61922B3100A004BB48F /* Main.storyboard in Resources */,
@@ -270,6 +279,7 @@
 				6208E64522B315AB004BB48F /* Photo.m in Sources */,
 				6208E61622B3100A004BB48F /* ViewController.m in Sources */,
 				6208E62122B3100B004BB48F /* main.m in Sources */,
+				6208E64822B3208F004BB48F /* PhotoCollectionViewCell.m in Sources */,
 				6208E61322B3100A004BB48F /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
