@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "Photo.h"
 
 @interface ViewController ()
 
@@ -44,23 +45,12 @@
         // If we reach this point, we have successfully retrieved the JSON from the API
         NSDictionary *photos = queryResult[@"photos"];
         NSArray *photoArray = photos[@"photo"];
-        for (NSDictionary *photo in photoArray) { // 4
-//            server
-//            farm
-//            id
-//            secret
-//            url
-//            title
-            NSString *title =  photo[@"title"];
-            NSLog(@"title: %@", title);
-            NSLog(@"server: %@", photo[@"server"]);
-            NSLog(@"farm: %@", photo[@"farm"]);
-            NSLog(@"id: %@", photo[@"id"]);
-            NSLog(@"secret: %@", photo[@"secret"]);
+        for (NSDictionary *photoImport in photoArray) { // 4
             
+            Photo *photo = [[Photo alloc] initWithDict:photoImport];
             
-            
-            
+            NSLog(@"PHOTO NAMED:%@ IMPORTED TO OBJECT", photo.title);
+   
             
         }
     }];

@@ -12,10 +12,14 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface Photo : NSObject
 
+@property NSString *title;
+@property NSString *farm;
+@property NSString *photoID;
+@property NSString *secret;
+@property NSString *server;
+@property NSString *url;
 
-@property NSString *repoName;
-
-- (instancetype)initWithDict:(NSDictionary *)repoDict;
+- (instancetype)initWithDict:(NSDictionary *)photoDict;
 
 
 @end

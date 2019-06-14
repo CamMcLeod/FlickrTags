@@ -11,11 +11,24 @@
 @implementation Photo
 
 
-- (instancetype)initWithDict:(NSDictionary *)repoDict {
+- (instancetype)initWithDict:(NSDictionary *)photoDict {
     
     self = [super init];
     if (self) {
-        _repoName = repoDict[@"name"];
+        NSString *title = photoDict[@"title"];
+        _title = title;
+        _farm = photoDict[@"farm"];
+        _photoID = photoDict[@"id"];
+        _server = photoDict[@"server"];
+        _secret = photoDict[@"secret"];
+        
+        /*
+        https://farm{farm-id}.staticflickr.com/{server-id}/{id}_{secret}.jpg
+        establish url using this format
+         */
+        NSString *url = [[NSString alloc] initWithFormat:@"https://farm%@.staticflickr.com/%@/%@_%@.jpg", photoDict[@"farm"], photoDict[@"server"], photoDict[@"id"],photoDict[@"secret"]];
+        _url = url;
+        
     }
     return self;
 }
