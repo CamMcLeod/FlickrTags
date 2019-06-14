@@ -27,6 +27,8 @@
         establish url using this format
          */
         NSString *url = [[NSString alloc] initWithFormat:@"https://farm%@.staticflickr.com/%@/%@_%@.jpg", photoDict[@"farm"], photoDict[@"server"], photoDict[@"id"],photoDict[@"secret"]];
+        
+        
         _url = url;
         
     }
